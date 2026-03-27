@@ -529,41 +529,176 @@
     color: var(--light);
   }
  
-  /* ─── CTA BANNER ─── */
-  .cta-banner {
-    position: relative; overflow: hidden;
-    padding: 100px 60px;
-    background: var(--dark2);
-  }
-  .cta-banner::before {
-    content: '';
-    position: absolute; top: 0; left: 0; bottom: 0;
-    width: 6px;
-    background: var(--orange);
-  }
-  .cta-banner-bg {
-    position: absolute; right: 0; top: 0; bottom: 0; width: 50%;
-    background: linear-gradient(to left, rgba(240,90,40,.06) 0%, transparent 100%);
-  }
-  .cta-inner { position: relative; z-index: 1; max-width: 700px; }
-  .cta-inner .section-title { margin-bottom: 16px; }
-  .cta-inner .section-desc { margin-bottom: 36px; }
-  .cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-whatsapp {
-    background: #25D366;
-    color: white;
-    padding: 16px 36px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    border: none; cursor: pointer;
-    text-decoration: none;
-    display: inline-flex; align-items: center; gap: 10px;
-    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-    transition: all .25s;
-  }
-  .btn-whatsapp:hover { background: #1abe57; transform: translateY(-2px); }
- 
+/* CTA BANNER */
+
+.cta-banner{
+position:relative;
+padding:100px 60px;
+background:var(--dark2);
+overflow:hidden;
+}
+
+.cta-banner::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+width:6px;
+background:var(--orange);
+}
+
+.cta-banner-bg{
+position:absolute;
+right:0;
+top:0;
+bottom:0;
+width:50%;
+background:linear-gradient(to left,rgba(240,90,40,.06),transparent);
+}
+
+/* LAYOUT */
+
+.cta-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
+}
+
+.cta-inner{
+max-width:650px;
+}
+
+/* BUTTONS */
+
+.cta-actions{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:white;
+padding:16px 34px;
+font-family:'Barlow Condensed',sans-serif;
+font-size:14px;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+border:none;
+cursor:pointer;
+text-decoration:none;
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+
+clip-path:polygon(
+0 0,
+calc(100% - 12px) 0,
+100% 12px,
+100% 100%,
+12px 100%,
+0 calc(100% - 12px)
+);
+
+transition:all .25s;
+}
+
+.btn-whatsapp:hover{
+background:#1abe57;
+transform:translateY(-2px);
+}
+
+.btn-outline{
+padding:16px 34px;
+border:2px solid white;
+color:white;
+text-decoration:none;
+font-family:'Barlow Condensed',sans-serif;
+font-size:14px;
+letter-spacing:2px;
+text-transform:uppercase;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+}
+
+/* CONTACT INFO */
+
+.contact-info{
+margin-top:36px;
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.contact-label{
+color:var(--orange);
+font-size:10px;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:4px;
+}
+
+/* SOCIAL BOX */
+
+.social-box{
+background:white;
+padding:40px;
+border-radius:18px;
+width:520px;
+}
+
+.social-bar{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.social{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:16px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:600;
+font-size:15px;
+}
+
+/* SOCIAL COLORS */
+
+.whatsapp{background:#25D366;}
+.facebook{background:#4267B2;}
+.phone{background:#1abc9c;}
+.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);}
+.youtube{background:#FF0000;}
+.linkedin{background:#0077B5;}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.cta-container{
+flex-direction:column;
+}
+
+.social-box{
+width:100%;
+}
+
+.social-bar{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
   /* ─── FOOTER ─── */
   footer {
     background: #080808;
@@ -668,47 +803,7 @@
 
 
   
-.social-bar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
 
-.social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.whatsapp{ background:#25D366; } .facebook{ background:#4267B2; }
-.phone{ background:#1abc9c; } .instagram{ background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
-.youtube{ background:#FF0000; } .linkedin{ background:#0077B5; }
-
-.contact-section {
-    background: white;
-    padding: 50px 20px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.contact-logo img { width: 250px; margin-bottom: 30px; }
-
-
-.i {
-    position: absolute;
-   bottom:90vh;
-    right: 3vw;
-    width: 600px;
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-}
 </style>
 </head>
 <body>
@@ -726,7 +821,7 @@
 <nav id="navbar">
   <a class="nav-logo" href="#">
     <img width="100" height="70"
-src="logo.jpeg" alt="Logo">
+src="images/logo.jpeg" alt="Logo">
     <div>
       <div class="nav-logo-text">Diamond</div>
       <span class="nav-logo-sub">Crushers</span>
@@ -1083,74 +1178,91 @@ src="logo.jpeg" alt="Logo">
 </section>
  
 <!-- CTA BANNER -->
-<div class="cta-banner reveal">
-  <div class="cta-banner-bg"></div>
-  <div class="cta-inner">
-    <div class="section-tag">Get In Touch</div>
-    <h2 class="section-title">Ready to Crush Your<br>Production Goals?</h2>
-    <p class="section-desc">Talk to our crushing specialists. We'll help you design the perfect solution — from a single machine to a full 500 TPH turnkey plant.</p>
-    <div class="cta-actions">
-      <a href="https://wa.me/917842547487" target="_blank" class="btn-whatsapp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Chat on WhatsApp
-      </a>
-      <a href="mailto:info.jaysconsultants@gmail.com" class="btn-outline" style="color:white;">✉️ Send Email</a>
-    </div>
-    <div style="margin-top:36px; display:flex; gap:40px; flex-wrap:wrap;">
-      <div style="font-size:13px; color:var(--mid);">
-        <div style="color:var(--orange); font-size:10px; letter-spacing:3px; text-transform:uppercase; margin-bottom:4px;">Phone</div>
-        <a href="tel:+917842547487" style="color:var(--light); text-decoration:none;">+91 7842547487</a>
-      </div>
-      <div style="font-size:13px; color:var(--mid);">
-        <div style="color:var(--orange); font-size:10px; letter-spacing:3px; text-transform:uppercase; margin-bottom:4px;">Email</div>
-        <a href="mailto:info.jaysconsultants@gmail.com" style="color:var(--light); text-decoration:none;">info.jaysconsultants@gmail.com</a>
-      </div>
-      <div style="font-size:13px; color:var(--mid);">
-        <div style="color:var(--orange); font-size:10px; letter-spacing:3px; text-transform:uppercase; margin-bottom:4px;">Address</div>
-        <span style="color:var(--light);">Sector 15, CBD Belapur, Navi Mumbai – 400 614</span>
-      </div>
-    </div>
-   
-  </div>
+<div class="cta-banner">
+
+<div class="cta-banner-bg"></div>
+
+<div class="cta-container">
+
+<!-- LEFT SIDE -->
+<div class="cta-inner">
+
+<div class="section-tag">GET IN TOUCH</div>
+
+<h2 class="section-title">
+READY TO CRUSH YOUR<br>
+PRODUCTION GOALS?
+</h2>
+
+<p class="section-desc">
+Talk to our crushing specialists. We'll help you design the perfect solution — 
+from a single machine to a full 500 TPH turnkey plant.
+</p>
+
+<div class="cta-actions">
+
+<a href="https://wa.me/917842547487" target="_blank" class="btn-whatsapp">
+
+<svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+</svg>
+
+CHAT ON WHATSAPP
+
+</a>
+
+<a href="mailto:info.jaysconsultants@gmail.com" class="btn-outline">
+✉ SEND EMAIL
+</a>
+
 </div>
 
-<div class="i">
-	
+<div class="contact-info">
+
+<div>
+<div class="contact-label">PHONE</div>
+<a href="tel:+917842547487">+91 7842547487</a>
+</div>
+
+<div>
+<div class="contact-label">EMAIL</div>
+<a href="mailto:info.jaysconsultants@gmail.com">
+info.jaysconsultants@gmail.com
+</a>
+</div>
+
+<div>
+<div class="contact-label">ADDRESS</div>
+<span>Sector 15, CBD Belapur, Navi Mumbai – 400 614</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDE SOCIAL BOX -->
+<div class="social-box">
+
 <div class="social-bar">
 
-    <a href="https://api.whatsapp.com/send?phone=918108844415" target="_blank" class="social whatsapp">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp</span>
-    </a>
+<a href="https://api.whatsapp.com/send?phone=918108844415" class="social whatsapp">WhatsApp</a>
 
-    <a href="https://www.facebook.com/diamondcrushers01/" target="_blank" class="social facebook">
-        <i class="fab fa-facebook-f"></i>
-        <span>Facebook</span>
-    </a>
+<a href="https://www.facebook.com/diamondcrushers01/" class="social facebook">Facebook</a>
 
-    <a href="tel:918108844415" class="social phone">
-        <i class="fas fa-phone"></i>
-        <span>Call Us</span>
-    </a>
+<a href="tel:918108844415" class="social phone">Call Us</a>
 
-    <a href="https://www.instagram.com/diamond.crushers/" target="_blank" class="social instagram">
-        <i class="fab fa-instagram"></i>
-        <span>Instagram</span>
-    </a>
+<a href="https://www.instagram.com/diamond.crushers/" class="social instagram">Instagram</a>
 
-    <a href="https://www.youtube.com/channel/UC-1BqOOi8fWD0q4yeUq7sYg" target="_blank" class="social youtube">
-        <i class="fab fa-youtube"></i>
-        <span>YouTube</span>
-    </a>
+<a href="https://www.youtube.com/channel/UC-1BqOOi8fWD0q4yeUq7sYg" class="social youtube">YouTube</a>
 
-    <a href="https://www.linkedin.com/in/diamond-crushers-9828b11b7/" target="_blank" class="social linkedin">
-        <i class="fab fa-linkedin-in"></i>
-        <span>LinkedIn</span>
-    </a>
+<a href="https://www.linkedin.com/in/diamond-crushers-9828b11b7/" class="social linkedin">LinkedIn</a>
+
+</div>
+
+</div>
 
 </div>
 </div>
-
  
 <!-- FOOTER -->
 <footer>
