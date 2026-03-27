@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Combo Plants - Diamond Crusher</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0A0A0A;
+color: #C44318;
+}
+
+/* HERO */
+
+.hero{
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(#0A0A0A),
+url('https://images.unsplash.com/photo-1581093588401-22f1c1d22a38');
+
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+color:white;
+font-size:42px;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* PRODUCT IMAGE */
+
+.product-image{
+text-align:center;
+margin-bottom:60px;
+}
+
+.product-image img{
+width:100%;
+max-width:900px;
+border-radius:10px;
+transition:0.4s;
+}
+
+.product-image img:hover{
+transform:scale(1.04);
+}
+
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:30px;
+text-align:center;
+margin-bottom:70px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.feature img{
+width:90px;
+margin-bottom:10px;
+}
+
+/* TABLE */
+
+.table-section h2{
+text-align:center;
+margin-bottom:30px;
+font-size:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#333a80;
+color:white;
+padding:12px;
+}
+
+td{
+padding:10px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f4eddd;
+}
+
+/* CONTACT */
+
+.contact-box{
+margin-top:60px;
+background:#0f2027;
+color:white;
+padding: 30px;
+text-align:center;
+border-radius:5px;
+}
+
+.contact-box a{
+color:white;
+text-decoration:none;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#ff9800;
+color:white;
+border-radius:6px;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#e68900;
+}
+
+/* BACK BUTTON */
+
+.back-button{
+position:fixed;
+top:20px;
+right:20px;
+}
+
+.back-button a{
+background:#ff9800;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.back-button a:hover{
+background:#e68900;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.features{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+.image1{
+			 top:1vh;
+			 left:1vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+        #demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+
+</style>
+
+</head>
+
+<body>
+
+   <div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<p id="demo"></p>
+
+<div class="back-button">
+<a href="javascript:history.back()">Home</a>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+<h1>Combo Plants</h1>
+</section>
+
+<div class="container">
+
+<!-- PRODUCT IMAGE -->
+
+<div class="product-image">
+
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/02/Group-32.png">
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="features">
+
+<div class="feature">
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/02/JawCrusher_RJ_DJPrimary_ExceptionalPerformance-1.png">
+<p>Available in 50TPH, 80TPH and 110TPH</p>
+</div>
+
+<div class="feature">
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/02/JawCrusher_RJ_SturdyDesign-1-1.png">
+<p>Two stage crushing for optimised performance</p>
+</div>
+
+<div class="feature">
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/02/JawCrusher_RJ_UnmatchedDurability-1-1.png">
+<p>Larger screen size for best output</p>
+</div>
+
+<div class="feature">
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/02/JawCrusher_RJ_EasyInstall-1-1.png">
+<p>Single chassis mounting</p>
+</div>
+
+<div class="feature">
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/02/JawCrusher_RJ_WorryFreeOperations-1.svg">
+<p>Lesser civil work</p>
+</div>
+
+</div>
+
+<!-- TABLE -->
+
+<section class="table-section">
+
+<h2>Two Stage Crushing & Screening Plant Specifications</h2>
+
+<table>
+
+<tr>
+<th>Model / Items</th>
+<th colspan="2">RS50 COMBO</th>
+<th colspan="2">RS80 COMBO</th>
+<th colspan="2">RS110 COMBO</th>
+</tr>
+
+<tr>
+<td>Integrated Hopper</td>
+<td>5 m3</td><td>-</td>
+<td>5 m3</td><td>-</td>
+<td>5 m3</td><td>-</td>
+</tr>
+
+<tr>
+<td>Vibro Feeder</td>
+<td>RGF 0932</td><td>2.2×2</td>
+<td>RGF 0932</td><td>2.2×2</td>
+<td>RGF 0932</td><td>2.2×2</td>
+</tr>
+
+<tr>
+<td>Primary Crusher</td>
+<td>DJ 2418</td><td>37.5</td>
+<td>DJ 3220</td><td>45</td>
+<td>DJ 3220</td><td>45</td>
+</tr>
+
+<tr>
+<td>Total Power</td>
+<td></td><td>108.9</td>
+<td></td><td>141.5</td>
+<td></td><td>161.5</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- CONTACT -->
+
+<div class="contact-box">
+
+<h3>Get in touch</h3>
+
+<p>
+<a href="mailto:sales@diamondcrusher.in">sales@diamondcrusher.in</a><br><br>
++91 81088 44415
+</p>
+
+<a class="btn">Download Brochure</a>
+
+</div>
+
+</div>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+
+</body>
+</html>

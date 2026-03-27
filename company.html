@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Introduction - Diamond Crusher</title>
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background:#0A0A0A;
+color: #C44318;
+            line-height: 1.7;
+            height:100%;
+        }
+
+        .about-section {
+            padding: 90px 20px;
+            background: linear-gradient(#0A0A0A),
+                        url('https://images.unsplash.com/photo-1581093588401-22f1c1d22a38') center/cover no-repeat;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: #ffffff;
+            padding: 50px 60px;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Main container hover */
+        .container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #0f2027;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ff9800;
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        /* Reduced space between strong heading & content */
+        p strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 6px; /* reduced spacing */
+            color: #0f2027;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        /* Section hover effect */
+        p:hover {
+            transform: translateX(8px);
+        }
+
+        p:hover strong {
+            color: #ff9800;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            p strong {
+                font-size: 18px;
+            }
+        }
+        /* Back Button */
+.back-button{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.image1{
+			 top:1vh;
+			 left:1vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+        #demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+
+
+.h{
+	top:80vh;
+	position:absolute;
+	left:4vw;
+	width:700px;
+}
+
+
+.i{
+    position:absolute;
+    top:100vh;
+    right:4vw;
+    width:600px;
+	
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+
+.social-bar{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+}
+
+
+
+.social{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+    transition:all 0.4s ease;
+}
+
+.social i{
+    font-size:18px;
+}
+
+
+.social:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+.whatsapp{ background:#25D366; }
+.facebook{ background:#4267B2; }
+.phone{ background:#1abc9c; }
+.instagram{ background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+.youtube{ background:#FF0000; }
+.linkedin{ background:#0077B5; }
+
+
+@media(max-width:768px){
+    .i{
+        width:90%;
+        right:5%;
+        padding:20px;
+    }
+
+    .social-bar{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+
+.contact-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:white;
+    padding:50px 20px;
+    border-radius:15px;
+    max-width:900px;
+    margin:50px auto;
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.contact-logo img{
+    width:250px;
+    margin-bottom:30px;
+}
+
+.contact-details{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-item{
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+
+.contact-item a{
+    text-decoration:none;
+    color:#0b3d5c;
+    font-weight:600;
+    transition:all 0.3s ease;
+}
+
+.contact-item a:hover{
+    color:orange;
+    transform:scale(1.05);
+}
+
+.icon{
+    font-size:22px;
+}
+
+
+/* MOBILE RESPONSIVE FIX */
+
+@media (max-width:768px){
+
+.main{
+height:auto;
+padding-bottom:50px;
+}
+}
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<p id="demo"></p>
+     <div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+    </div>
+    <section class="about-section">
+        <div class="container">
+            <h1>Company Introduction</h1>
+            <p><strong>Company Introduction</strong>Diamond Crusher, operated by Titan Crushing Equipment LLP, is a leading Indian manufacturer of crushing and screening equipment used in construction, mining, infrastructure, and material processing industries. With over 60 years of experience, the company delivers reliable, high-performance machinery that converts large rocks into usable construction materials like sand, gravel, and crushed stone.</p>
+</div>
+</section>
+
+<div class="h">
+		<div class="contact-section">
+
+    
+    <div class="contact-logo">
+        <a href="https://diamondcrusher.in/">
+            <img src="https://diamondcrusher.in/wp-content/uploads/2024/07/images.png" 
+                 alt="Diamond Crusher Logo">
+        </a>
+    </div>
+
+    
+    <div class="contact-details">
+
+        <div class="contact-item">
+            <span class="icon">📍</span>
+            <a href="https://maps.app.goo.gl/wGxjmmc4hQvafs3XA" target="_blank">
+                Sector 15, CBD Belapur, Navi Mumbai, Maharashtra 400614
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span class="icon">✉️</span>
+            <a href="mailto:sales@diamondcrusher.in">
+                sales@diamondcrusher.in
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span class="icon">📞</span>
+            <a href="tel:+918108844415">
+                +91 81088 44415
+            </a>
+        </div>
+
+    </div>
+	</div>
+
+</div>
+
+<div class="i">
+	
+<div class="social-bar">
+
+    <a href="https://api.whatsapp.com/send?phone=918108844415" target="_blank" class="social whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <a href="https://www.facebook.com/diamondcrushers01/" target="_blank" class="social facebook">
+        <i class="fab fa-facebook-f"></i>
+        <span>Facebook</span>
+    </a>
+
+    <a href="tel:918108844415" class="social phone">
+        <i class="fas fa-phone"></i>
+        <span>Call Us</span>
+    </a>
+
+    <a href="https://www.instagram.com/diamond.crushers/" target="_blank" class="social instagram">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+    </a>
+
+    <a href="https://www.youtube.com/channel/UC-1BqOOi8fWD0q4yeUq7sYg" target="_blank" class="social youtube">
+        <i class="fab fa-youtube"></i>
+        <span>YouTube</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/diamond-crushers-9828b11b7/" target="_blank" class="social linkedin">
+        <i class="fab fa-linkedin-in"></i>
+        <span>LinkedIn</span>
+    </a>
+
+</div>
+</div>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+</body>
+</html>

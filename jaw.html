@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jaw Crushers - Diamond Crusher</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box; 
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+         background:#0A0A0A;
+color: #C44318;
+}
+
+/* Section Background */
+.section{
+    padding:100px 20px;
+    background: linear-gradient(#0A0A0A);
+}
+
+/* Container */
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Main Heading */
+h1{
+    text-align:center;
+    font-size:42px;
+    color:#ffffff;
+    margin-bottom:70px;
+    font-weight:600;
+    position:relative;
+}
+
+h1::after{
+    content:'';
+    width:90px;
+    height:4px;
+    background:#ff9800;
+    display:block;
+    margin:15px auto 0;
+    border-radius:3px;
+}
+
+/* Grid Layout */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+/* Card Styling */
+.product-card{
+    background:rgba(255,255,255,0.95);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    transition:all 0.4s ease;
+    backdrop-filter: blur(6px);
+}
+
+.product-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,0.35);
+}
+
+/* Image */
+.product-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    transition:0.4s ease;
+}
+
+.product-card:hover img{
+    transform:scale(1.08);
+}
+
+/* Content */
+.product-content{
+    padding:30px;
+}
+
+.product-content h3{
+    font-size:22px;
+    color:#0f2027;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.product-content p{
+    font-size:15px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#ff9800;
+    color:#ffffff;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:500;
+    transition:all 0.3s ease;
+}
+
+.btn:hover{
+    background:#e68900;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    h1{
+        font-size:28px;
+    }
+
+    .section{
+        padding:70px 15px;
+    }
+}
+ /* Back Button */
+.back-button{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.image1{
+			 top:1vh;
+			 left:1vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+        #demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+</style>
+</head>
+
+<body>
+     <div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+    </div>
+
+<div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<p id="demo"></p>
+<section class="section">
+    <div class="container">
+        <h1>Jaw Crushers</h1>
+
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://diamondcrusher.in/wp-content/uploads/2024/02/Group-26-1.png" alt="">
+                <div class="product-content">
+                    <h3>RJ Series</h3>
+                    <p>
+                        High-performance primary crushing solution designed for durability,
+                        efficiency, and heavy-duty mining operations.
+                    </p>
+                    <a href="rj.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://diamondcrusher.in/wp-content/uploads/2024/02/Group-27-2.png" alt="">
+                <div class="product-content">
+                    <h3>DJ Series - Primary</h3>
+                    <p>
+                        Integrated crushing system offering mobility, flexibility,
+                        and superior output for infrastructure projects.
+                    </p>
+                    <a href="dj-primary.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://diamondcrusher.in/wp-content/uploads/2024/02/Group-27-2.png" alt="">
+                <div class="product-content">
+                    <h3>DJ Series - Secondary</h3>
+                    <p>
+                        Compact and mobile crushing unit ideal for on-site
+                        crushing applications and remote projects.
+                    </p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+
+</body>
+</html>

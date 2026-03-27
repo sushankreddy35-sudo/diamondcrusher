@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Crusher Blog</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#0A0A0A;
+    margin:0;
+    padding:0;
+    
+}
+.image1{
+			 top:1vh;
+			 left:1vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+
+h1{
+    text-align:center;
+    margin:50px 0;
+    font-size:34px;
+    font-weight:600;
+    color: #C44318;
+}
+
+
+.blog-container{
+    width:92%;
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    gap:35px;
+    padding-bottom:80px;
+}
+
+
+
+.blog-card,
+.wpr-grid-item-inner{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(0,0,0,0.06);
+    transform:translateY(60px);
+    opacity:0;
+    transition:all 0.7s cubic-bezier(.17,.67,.35,1);
+    position:relative;
+}
+
+
+.blog-card.active,
+.wpr-grid-item-inner.active{
+    transform:translateY(0);
+    opacity:1;
+}
+
+
+.blog-card:hover,
+.wpr-grid-item-inner:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+}
+
+
+
+.blog-card img,
+.wpr-grid-image-wrap img{
+    width:100%;
+    display:block;
+    transition:transform 0.8s ease;
+}
+
+.blog-card:hover img,
+.wpr-grid-item-inner:hover img{
+    transform:scale(1.08);
+}
+
+
+.wpr-grid-media-wrap{
+    position:relative;
+}
+
+.wpr-grid-media-hover-bg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    opacity:0;
+    transition:0.4s ease;
+    cursor:pointer;
+}
+
+.blog-card:hover .wpr-grid-media-hover-bg,
+.wpr-grid-item-inner:hover .wpr-grid-media-hover-bg{
+    opacity:1;
+}
+
+
+
+.blog-content,
+.wpr-grid-item-below-content{
+    padding:22px;
+}
+
+/* Titles */
+.blog-title,
+.wpr-grid-item-title a{
+    font-size:18px;
+    font-weight:600;
+    color:#1e293b;
+    text-decoration:none;
+    line-height:1.4;
+}
+
+.blog-title{
+    margin:10px 0;
+}
+
+.blog-title:hover,
+.wpr-grid-item-title a:hover{
+    color:#e11d48;
+}
+
+/* Date + Comments */
+.blog-date,
+.wpr-grid-item-date,
+.wpr-grid-item-comments{
+    font-size:13px;
+    color:#64748b;
+    margin-top:8px;
+}
+
+/* Excerpt */
+.blog-excerpt,
+.wpr-grid-item-excerpt{
+    font-size:14px;
+    color:#475569;
+    line-height:1.7;
+    margin-top:14px;
+}
+
+/* Read More Button */
+.read-more,
+.wpr-grid-item-read-more a{
+    display:inline-block;
+    margin-top:20px;
+    padding:8px 20px;
+    background:#e11d48;
+    color:#fff;
+    border-radius:30px;
+    font-size:13px;
+    text-decoration:none;
+    transition:all 0.3s ease;
+}
+
+.read-more:hover,
+.wpr-grid-item-read-more a:hover{
+    background:#be123c;
+    transform:scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+    h1{
+        font-size:26px;
+    }
+
+    .blog-container{
+        gap:25px;
+    }
+}
+
+
+.back-button{
+position:absolute;
+top:5vh;
+right: 2vw;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+#demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Latest Insights & Articles</h1>
+
+<div class="blog-container">
+ <div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+</div> 
+
+
+<p id="demo"></p>
+
+    <!-- BLOG 1 -->
+    <div class="blog-card">
+        <div class="wpr-grid-media-hover-bg"
+             data-url="https://diamondcrusher.in/semi-mobile-crushing-plants-benefits/"></div>
+
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/05/Jaw-Crusher-Maintenance-Made-Easy-2.webp">
+
+        <div class="blog-content">
+            <div class="blog-date">May 27, 2025</div>
+            <div class="blog-title">
+                Vertical Shaft Impactor (VSI): Powerful Machine for Producing Crushed Sand
+            </div>
+            <div class="blog-excerpt">
+                The story of VSI Vertical Shaft Impactor began in India and transformed modern sand production.
+            </div>
+            <a href="https://diamondcrusher.in/semi-mobile-crushing-plants-benefits/" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <!-- BLOG 2 -->
+    <div class="blog-card">
+        <div class="wpr-grid-media-hover-bg"
+             data-url="https://diamondcrusher.in/jaw-crusher-maintenance-repair-guide/"></div>
+
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/05/Jaw-Crusher-Maintenance-Made-Easy-7.webp">
+
+        <div class="blog-content">
+            <div class="blog-date">May 9, 2025</div>
+            <div class="blog-title">
+                From Rubble to Riches: India’s Crusher Revolution
+            </div>
+            <div class="blog-excerpt">
+                Construction and demolition waste is emerging as a major global concern.
+            </div>
+            <a href="https://diamondcrusher.in/jaw-crusher-maintenance-repair-guide/" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <!-- BLOG 3 -->
+    <div class="blog-card">
+        <div class="wpr-grid-media-hover-bg"
+             data-url="https://diamondcrusher.in/how-is-manufactured-sand-plaster-sand-redefining-construction-from-rock-to-result/"></div>
+
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/05/Jaw-Crusher-Maintenance-Made-Easy-3.webp">
+
+        <div class="blog-content">
+            <div class="blog-date">May 9, 2025</div>
+            <div class="blog-title">
+                Why Smart Quarry Owners Choose Semi-Mobile Crushing Plants?
+            </div>
+            <div class="blog-excerpt">
+                Traditional stationary plants come with limitations — discover the smarter alternative.
+            </div>
+            <a href="https://diamondcrusher.in/how-is-manufactured-sand-plaster-sand-redefining-construction-from-rock-to-result/" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <!-- BLOG 4 -->
+<div class="wpr-grid-item-inner">
+
+    <div class="wpr-grid-media-wrap" data-overlay-link="yes">
+
+        <div class="wpr-grid-image-wrap">
+            <img src="https://diamondcrusher.in/wp-content/uploads/2025/05/Jaw-Crusher-Maintenance-Made-Easy-2.jpg"
+                 alt="Semi-mobile crushing plants: The smart choice for flexible and efficient aggregate processing.">
+        </div>
+
+        <div class="wpr-grid-media-hover">
+            <div class="wpr-grid-media-hover-bg"
+                 data-url="https://diamondcrusher.in/semi-mobile-crushing-plants-benefits/">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wpr-grid-item-below-content">
+
+        <h2 class="wpr-grid-item-title">
+            <a href="https://diamondcrusher.in/semi-mobile-crushing-plants-benefits/">
+                Why Smart Quarry Owners Choose Semi-Mobile Crushing Plants? (Part 1)
+            </a>
+        </h2>
+
+        <div class="wpr-grid-item-date">
+            <span>May 8, 2025</span>
+        </div>
+
+        <div class="wpr-grid-item-comments">
+            <a href="https://diamondcrusher.in/semi-mobile-crushing-plants-benefits/#respond">
+                <span>No Comments</span>
+            </a>
+        </div>
+
+        <div class="wpr-grid-item-excerpt">
+            <p>
+                Why Smart Quarry Owners Choose Semi-Mobile Crushing Plants? (Part 1)
+                Introduction – Why be stuck in traditional stationary crushing plants...
+            </p>
+        </div>
+
+        <div class="wpr-grid-item-read-more">
+            <a href="https://diamondcrusher.in/semi-mobile-crushing-plants-benefits/">
+                Read More
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- BLOG 5 -->
+<div class="wpr-grid-item-inner">
+
+    <div class="wpr-grid-media-wrap" data-overlay-link="yes">
+
+        <div class="wpr-grid-image-wrap">
+            <img src="https://diamondcrusher.in/wp-content/uploads/2025/05/Jaw-Crusher-Maintenance-Made-Easy.webp"
+                 alt="Ensure your jaw crusher runs smoothly and lasts longer with regular maintenance and timely repairs.">
+        </div>
+
+        <div class="wpr-grid-media-hover">
+            <div class="wpr-grid-media-hover-bg"
+                 data-url="https://diamondcrusher.in/jaw-crusher-maintenance-repair-guide/">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wpr-grid-item-below-content">
+
+        <h2 class="wpr-grid-item-title">
+            <a href="https://diamondcrusher.in/jaw-crusher-maintenance-repair-guide/">
+                The Ultimate Handbook for Jaw Crusher Maintenance and Repairs
+            </a>
+        </h2>
+
+        <div class="wpr-grid-item-date">
+            <span>May 8, 2025</span>
+        </div>
+
+        <div class="wpr-grid-item-comments">
+            <a href="https://diamondcrusher.in/jaw-crusher-maintenance-repair-guide/#respond">
+                <span>No Comments</span>
+            </a>
+        </div>
+
+        <div class="wpr-grid-item-excerpt">
+            <p>
+                The story of jaw crushers began in the 1850s.
+                Learn how to properly maintain and repair your crusher for maximum lifespan...
+            </p>
+        </div>
+
+        <div class="wpr-grid-item-read-more">
+            <a href="https://diamondcrusher.in/jaw-crusher-maintenance-repair-guide/">
+                Read More
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- BLOG 6 -->
+<div class="wpr-grid-item-inner">
+
+    <div class="wpr-grid-media-wrap" data-overlay-link="yes">
+
+        <div class="wpr-grid-image-wrap">
+            <img src="https://diamondcrusher.in/wp-content/uploads/2025/04/Jaw-Crusher-Maintenance-Made-Easy-1.webp"
+                 alt="M Sand & P Sand - Diamond Crusher">
+        </div>
+
+        <div class="wpr-grid-media-hover">
+            <div class="wpr-grid-media-hover-bg"
+                 data-url="https://diamondcrusher.in/how-is-manufactured-sand-plaster-sand-redefining-construction-from-rock-to-result/">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wpr-grid-item-below-content">
+
+        <h2 class="wpr-grid-item-title">
+            <a href="https://diamondcrusher.in/how-is-manufactured-sand-plaster-sand-redefining-construction-from-rock-to-result/">
+                How is Manufactured Sand & Plaster Sand Redefining Construction from Rock to Result?
+            </a>
+        </h2>
+
+        <div class="wpr-grid-item-date">
+            <span>April 25, 2025</span>
+        </div>
+
+        <div class="wpr-grid-item-comments">
+            <a href="https://diamondcrusher.in/how-is-manufactured-sand-plaster-sand-redefining-construction-from-rock-to-result/#respond">
+                <span>No Comments</span>
+            </a>
+        </div>
+
+        <div class="wpr-grid-item-excerpt">
+            <p>
+                With increasing environmental concerns and rapid urban development,
+                manufactured sand and plaster sand are transforming construction practices...
+            </p>
+        </div>
+
+        <div class="wpr-grid-item-read-more">
+            <a href="https://diamondcrusher.in/how-is-manufactured-sand-plaster-sand-redefining-construction-from-rock-to-result/">
+                Read More
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+// Scroll Reveal Animation
+function revealOnScroll(){
+    const cards = document.querySelectorAll('.blog-card, .wpr-grid-item-inner');
+
+    cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+
+        if(rect.top < window.innerHeight - 100){
+            setTimeout(() => {
+                card.classList.add('active');
+            }, index * 120);
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+
+// Make hover overlay clickable
+document.querySelectorAll('.wpr-grid-media-hover-bg').forEach(item => {
+    item.addEventListener('click', function(){
+        const url = this.getAttribute('data-url');
+        if(url){
+            window.location.href = url;
+        }
+    });
+});
+
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+
+</body>
+</html>

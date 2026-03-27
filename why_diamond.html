@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Why Diamond - Diamond Crusher</title>
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+                                                       background:#0A0A0A;
+color: #C44318;
+            line-height: 1.7;
+        }
+
+        .about-section {
+            padding: 90px 20px;
+            background: linear-gradient(#0A0A0A),
+                        url('https://images.unsplash.com/photo-1581093588401-22f1c1d22a38') center/cover no-repeat;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: #ffffff;
+            padding: 50px 60px;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Main container hover */
+        .container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #0f2027;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ff9800;
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        /* Reduced space between strong heading & content */
+        p strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 6px; /* reduced spacing */
+            color: #0f2027;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        /* Section hover effect */
+        p:hover {
+            transform: translateX(8px);
+        }
+
+        p:hover strong {
+            color: #ff9800;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            p strong {
+                font-size: 18px;
+            }
+        }
+    /* Back Button */
+.back-button{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.image1{
+			 top:1vh;
+			 left:1vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+        #demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<p id="demo"></p>
+
+    <div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+    </div>
+    <section class="about-section">
+    <div class="container">
+        <h1>Why Diamond</h1>
+    <p><strong>Customer Centricity<br/></strong> For customers’ success! We believe in this and all our operations are oriented to achieve this. At Titan, customers are at the center of our activity; let be it product design, engineering, or service During the last six decades, Titan was fortunate to create enormous success stories in the crushing industry. 
+    We just don’t sell equipment, we go beyond to make you an expert in crushing.
+    </p>
+    <p><strong>Intelligence<br/></strong> Are aware that Titan’s crushing products are efficient, robust, and run on low maintenance. Titan has achieved this excellence through years of efforts across product design, engineering, and manufacturing. We have worked in diverse geographies and conditions across India. These insights are eventually transmitted in the product. Experience this intelligence through a range of Diamond products and create an advantage for yourself.
+    </p>
+    <p><strong>Expertise & Quality<br/></strong>Titan’s expertise in manufacturing consistently delivers quality that makes you successful in crushing business. All three manufacturing plants are process driven which ensures consistent output. Our human resources are well-trained, experienced, and quality-conscious. Each product is thoroughly tested on multiple performance parameters to ensure your delight and success. Our customers choose us for this expertise over any other feature.
+    </p>
+    <p><strong>Innovation & Sustainability<br/></strong>We embrace the latest technological advancements to stay ahead in the industry and increase your aggregate value. We deploy technology and innovate to optimize machine performance, efficiency, robustness. and create new solutions for you. We are committed to developing and delivering environmentally responsible engineering solutions to ensure sustainability.    
+    </p>
+    <p><strong>Reach<br/></strong>Titan’s sales and service network across the country ensures our closeness to your workplace. Titan’s trained and skilled service staff ensures a quick turnaround of your plant. Titan has a commited service facility near Pune to refurbish old equipment and provide a consistent supply of spare parts across places.</p>
+</div>
+</section>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+</body>
+</html>

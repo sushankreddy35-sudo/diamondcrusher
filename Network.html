@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+                               background:#0A0A0A;
+color: #C44318;
+}
+    
+
+.image1{
+			 top:1vh;
+			 left:2vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+        .a{
+            position:relative;
+            top:25vh;
+        }
+
+/* ===== HERO IMAGE ===== */
+
+#demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+.hero img{
+    width:70%;
+    height:auto;
+    display:block;
+    left:14vw;
+    position:relative;
+}
+
+/* ===== MAIN SECTION ===== */
+
+.section{
+    padding:80px 8%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+}
+
+/* ===== LEFT CONTENT ===== */
+
+.content{
+    flex:1;
+    transform:translateY(60px);
+    opacity:0;
+    transition:all 0.8s ease;
+}
+
+.content h2{
+    font-size:32px;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.content h2::after{
+    content:"";
+    width:60px;
+    height:4px;
+    background:#FC440F;
+    display:block;
+    margin-top:12px;
+    border-radius:4px;
+}
+
+.content p{
+    line-height:1.8;
+    color:white;
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+.content a{
+    color:#FC440F;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.content a:hover{
+    text-decoration:underline;
+}
+
+
+
+/* ===== ANIMATION ACTIVE ===== */
+
+.active{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .section{
+        padding:60px 6%;
+    }
+
+    .content h2{
+        font-size:24px;
+    }
+}
+
+.back-button{
+position:absolute;
+top:5vh;
+right: 2vw;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+<body>
+<div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+</div>
+
+
+<p id="demo"></p>
+
+    <div class="a">
+
+<!-- HERO IMAGE -->
+<div class="hero">
+    <img src="https://diamondcrusher.in/wp-content/uploads/2024/02/commissioning.jpg" alt="">
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+<div class="container">
+
+    <!-- LEFT CONTENT -->
+    <div class="content">
+        <h2>Network</h2>
+
+        <p>The Titan network spans across India, strategically positioned to serve our customers efficiently and effectively. Our network encompasses dedicated dealers, a skilled service workforce, and knowledgeable sales staff, all committed to provide quick support and assistance to you. With a wide-reaching presence, we assure our customers that wherever they are, we are always with them, ready to address their needs promptly.</p>
+
+        <p>Our sales staff and dealers act as the frontline ambassadors of our brand, offering personalized guidance and expertise to customers seeking our products. Backed by comprehensive training and resources, they ensure a seamless experience and provide valuable insights into our range of crushing solutions. Their local presence enhances accessibility, enabling customers to explore our products and solutions firsthand and make informed decisions.</p>
+
+        <p>Complementing our dealers, our service workforce delivers swift and reliable assistance whenever required. Equipped with technical proficiency and equipped with cutting-edge tools, they promptly address any maintenance or repair needs, minimizing downtime and maximizing operational efficiency. Our entire network is on a mission to serve you with excellence, to ensure your satisfaction and success in the crushing business.</p>
+
+        <p>For more details on our network, Please 
+        <a href="https://diamondcrusher.in/demo_dc/contact/" target="_blank">contact us</a></p>
+    </div>
+
+    
+
+    
+</div>
+</section>
+</div>
+
+<script>
+
+/* Scroll Reveal Animation */
+
+function reveal(){
+    const elements = document.querySelectorAll('.content, .sidebar');
+
+    elements.forEach((el)=>{
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+
+</script>
+
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+
+</body>
+</html>

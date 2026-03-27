@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Gallery Section</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+     background:#0A0A0A;
+color: #C44318;
+}
+
+.image1{
+			 top:1vh;
+			 left:2vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+        .a{
+            position:relative;
+            top:10vh;
+        }
+
+/* ===== SECTION ===== */
+
+.section{
+    padding:80px 8%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===== GRID LAYOUT ===== */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+/* ===== IMAGE CARD ===== */
+
+.image-card{
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,0.08);
+    transform:translateY(60px);
+    opacity:0;
+    transition:all 0.8s ease;
+}
+
+.image-card img{
+    width:100%;
+    display:block;
+    transition:transform 0.6s ease;
+}
+
+/* Hover Effect */
+
+.image-card:hover img{
+    transform:scale(1.05);
+}
+
+/* Reveal Animation */
+
+.image-card.active{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:60px 6%;
+    }
+}
+
+.back-button{
+position:absolute;
+top:5vh;
+right: 2vw;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+#demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+
+</style>
+</head>
+<body>
+
+ <div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+
+<div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+</div>
+
+
+<p id="demo"></p>
+
+<div class="a">
+    
+<!-- SECTION 1 -->
+<section class="section">
+<div class="container">
+<div class="grid">
+
+    <div class="image-card">
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/06/4.svg" alt="">
+    </div>
+
+    <div class="image-card">
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/06/3.svg" alt="">
+    </div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SECTION 2 -->
+<section class="section">
+<div class="container">
+<div class="grid">
+
+    <div class="image-card">
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/06/6.svg" alt="">
+    </div>
+
+    <div class="image-card">
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/06/5.svg" alt="">
+    </div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SECTION 3 -->
+<section class="section">
+<div class="container">
+<div class="grid">
+
+    <div class="image-card">
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/06/1.svg" alt="">
+    </div>
+
+    <div class="image-card">
+        <img src="https://diamondcrusher.in/wp-content/uploads/2025/06/2.svg" alt="">
+    </div>
+
+</div>
+</div>
+</section>
+</div>
+
+
+<script>
+
+/* Scroll Reveal Animation */
+
+function reveal(){
+    const cards = document.querySelectorAll('.image-card');
+
+    cards.forEach((card, index)=>{
+        const rect = card.getBoundingClientRect();
+
+        if(rect.top < window.innerHeight - 100){
+            setTimeout(()=>{
+                card.classList.add('active');
+            }, index * 150);
+        }
+    });
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+
+</body>
+</html>

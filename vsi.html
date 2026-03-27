@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products - VSI</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+                                            background:#0A0A0A;
+color: #C44318;
+line-height:1.7;
+}
+
+/* SECTION */
+.about-section{
+padding:90px 20px;
+background:linear-gradient(#0A0A0A),
+url('https://images.unsplash.com/photo-1581093588401-22f1c1d22a38') center/cover no-repeat;
+}
+
+/* CONTAINER */
+.container{
+max-width:1200px;
+margin:auto;
+background:#fff;
+padding:60px;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+animation:fadeIn 1s ease;
+transition:0.4s;
+}
+
+/* container hover */
+.container:hover{
+transform:translateY(-6px);
+box-shadow:0 25px 60px rgba(0,0,0,0.3);
+}
+
+/* HEADING */
+h1{
+text-align:center;
+font-size:40px;
+font-weight:600;
+margin-bottom:40px;
+color:#0f2027;
+position:relative;
+transition:0.3s;
+}
+
+h1::after{
+content:'';
+width:80px;
+height:4px;
+background:#ff9800;
+display:block;
+margin:12px auto 0;
+border-radius:3px;
+}
+
+/* heading hover */
+h1:hover{
+color:#ff9800;
+}
+
+/* TEXT */
+p{
+margin-bottom:25px;
+font-size:16px;
+color:#555;
+transition:0.3s;
+}
+
+p:hover{
+transform:translateX(6px);
+}
+
+p strong{
+display:block;
+font-size:20px;
+margin-bottom:6px;
+color:#0f2027;
+font-weight:600;
+transition:0.3s;
+}
+
+p:hover strong{
+color:#ff9800;
+}
+
+/* PRODUCT CARD */
+.product-card{
+margin-top:40px;
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.4s;
+text-align:center;
+}
+
+.product-card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 25px 60px rgba(0,0,0,0.3);
+}
+
+/* PRODUCT IMAGE */
+.product-card img{
+width:100%;
+height:260px;
+object-fit:contain;
+padding:20px;
+background:#f7f7f7;
+transition:0.4s;
+}
+
+/* image hover zoom */
+.product-card:hover img{
+transform:scale(1.08);
+}
+
+/* PRODUCT CONTENT */
+.product-content{
+padding:25px;
+}
+
+.product-content h3{
+font-size:22px;
+margin-bottom:12px;
+color:#0f2027;
+transition:0.3s;
+}
+
+/* heading hover */
+.product-card:hover h3{
+color:#ff9800;
+}
+
+.product-content p{
+font-size:15px;
+color:#555;
+margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:10px 25px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+transition:0.3s;
+}
+
+/* button hover */
+.btn:hover{
+background:#e68900;
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.container{
+padding:30px;
+}
+
+h1{
+font-size:28px;
+}
+
+.product-card img{
+height:200px;
+}
+
+}
+
+/* Back Button */
+.back-button{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.image1{
+top:1vh;
+left:1vw;
+position:absolute;
+ width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+}
+
+#demo{
+width:200px;
+height:300px;
+position:absolute;
+top:2vh;
+right:10vw;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<p id="demo"></p>
+
+<div class="back-button">
+<a href="javascript:history.back()">Home</a>
+</div>
+
+<section class="about-section">
+<div class="container">
+
+<h1>Vertical Shaft Impactor(VSI)</h1>
+
+<p>
+<strong>DVX Series</strong><br/>
+Diamond Vertical Shaft Impactors are the best choice to produce superior cubical aggregate and sand with the best yield and efficiency. The large feed size and superior design creates an edge for you and adds value to your success!
+</p>
+
+<p>
+<strong>RV Series</strong><br/>
+Demand for fine aggregates and sand has been growing rapidly and Diamond Vertical Shaft Impactor RV Series has been at the forefront to deliver it.
+</p>
+
+<!-- Product 1 -->
+<div class="product-card">
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/02/VSI-DVX-Series.png" alt="">
+<div class="product-content">
+<h3>DVX Series</h3>
+<p>
+Diamond Vertical Shaft Impactors are the best choice to produce superior cubical aggregate and sand with the best yield and efficiency.
+</p>
+</div>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card">
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/08/Verticle-Shaft-Impactor-RV-seriesRV-8.png" alt="">
+<div class="product-content">
+<h3>RV Series</h3>
+<p>
+Demand for fine aggregates and sand has been growing rapidly and Diamond Vertical Shaft Impactor RV Series has been at the forefront to deliver it.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+{pageLanguage: 'en'},
+'demo'
+);
+}
+</script>
+
+</body>
+</html>
+

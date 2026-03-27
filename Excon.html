@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond at Excon 2023</title>
+
+
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+     background:#0A0A0A;
+color: #C44318;
+}
+
+.image1{
+			 top:1vh;
+			 left:1vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+section{
+    padding:80px 8%;
+}
+
+h2{
+    font-size:32px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+
+
+/* ===== HERO IMAGE ===== */
+
+.hero-img{
+
+    width:70%;
+    height:auto;
+    display:block;
+    left:14vw;
+    top:13vh;
+    position:relative;
+}
+
+/* ===== CONTENT WRAPPER ===== */
+
+.content-wrapper{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ===== TEXT BLOCK ===== */
+
+.text-block{
+    font-size:16px;
+    line-height:1.8;
+    color:white;
+    margin-bottom:40px;
+}
+
+.text-block a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.text-block a:hover{
+    text-decoration:underline;
+}
+
+/* ===== VIDEO STYLE ===== */
+
+.video-wrapper{
+    margin:40px 0;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+    transform:translateY(40px);
+    opacity:0;
+    transition:all 0.8s ease;
+}
+
+.video-wrapper video{
+    width:100%;
+    display:block;
+}
+
+/* Scroll Animation */
+.video-wrapper.active,
+.fade-up.active{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.fade-up{
+    transform:translateY(40px);
+    opacity:0;
+    transition:all 0.8s ease;
+}
+
+/* ===== SECOND SECTION ===== */
+
+.highlight-section{
+    background:white;
+    border-radius:20px;
+    box-shadow:0 20px 70px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    h2{
+        font-size:24px;
+    }
+
+    section{
+        padding:60px 6%;
+    }
+}
+
+.back-button{
+position:absolute;
+top:5vh;
+right: 2vw;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+#demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+</div>  
+
+
+<p id="demo"></p>
+
+
+<!-- HERO IMAGE -->
+<img src="https://diamondcrusher.in/wp-content/uploads/2024/08/EXCON_Header1.jpg" 
+     alt="Excon 2023 - Diamond Crusher"
+     class="hero-img">
+
+<!-- SECTION 1 -->
+<section>
+<div class="content-wrapper">
+
+    <h2 class="fade-up">Diamond at Excon 2023</h2>
+
+    <div class="text-block fade-up">
+        <p>
+            <a href="https://www.excon.in/" target="_blank">Excon is Asia’s flagship</a>
+            event for Construction Machinery and Equipment.
+            <a href="https://diamondcrusher.in">Diamond</a>
+            participated at Excon 2023 in a big way and launched its new range of products.
+            Here are the glimpses of our participation…
+        </p>
+    </div>
+
+    <div class="video-wrapper">
+        <video src="https://diamondcrusher.in/wp-content/uploads/2024/08/5C-Diamond-Crusher-Excon-Overview-1.mp4"
+               autoplay
+               controls
+               controlslist="nodownload">
+        </video>
+    </div>
+
+</div>
+</section>
+
+
+<!-- SECTION 2 -->
+<section class="highlight-section">
+<div class="content-wrapper">
+
+    <h2 class="fade-up">Where you come first!</h2>
+
+    <div class="text-block fade-up">
+        Listen to our promising story in the below short from Mr. Vishwaroop Anand –
+        Managing Director, Titan Crushing Equipment.
+    </div>
+
+    <div class="video-wrapper">
+        <video src="https://diamondcrusher.in/wp-content/uploads/2024/08/1C-Diamond-Md-Speech-1.mp4"
+               controls
+               preload="metadata"
+               controlslist="nodownload">
+        </video>
+    </div>
+
+</div>
+</section>
+
+
+<script>
+
+/* Scroll Reveal Animation */
+
+function reveal(){
+    const elements = document.querySelectorAll('.fade-up, .video-wrapper');
+
+    elements.forEach((el, index)=>{
+        const rect = el.getBoundingClientRect();
+
+        if(rect.top < window.innerHeight - 100){
+            setTimeout(()=>{
+                el.classList.add('active');
+            }, index * 150);
+        }
+    });
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+
+</body>
+</html>

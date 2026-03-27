@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manufacturing - Diamond Crusher</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+                               background:#0A0A0A;
+color: #C44318;
+            line-height: 1.7;
+        }
+
+        .about-section {
+            padding: 90px 20px;
+            background: linear-gradient(#0A0A0A),
+                        url('https://images.unsplash.com/photo-1581093588401-22f1c1d22a38') center/cover no-repeat;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: #ffffff;
+            padding: 50px 60px;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Main container hover */
+        .container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #0f2027;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ff9800;
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        /* Reduced space between strong heading & content */
+        p strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 6px; /* reduced spacing */
+            color: #0f2027;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        /* Section hover effect */
+        p:hover {
+            transform: translateX(8px);
+        }
+
+        p:hover strong {
+            color: #ff9800;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            p strong {
+                font-size: 18px;
+            }
+        }
+     /* Back Button */
+.back-button{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.back-button a{
+display:inline-block;
+padding:10px 20px;
+background:#ff9800;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+border-radius:6px;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button a:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.image1{
+			 top:1vh;
+			 left:1vw;
+            position:absolute;
+             width: 170px;
+              height:130px;
+              background-color: white;
+    border-radius: 10px;
+           align-items: center;
+           text-align: center;
+		}
+
+        #demo{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:2vh;
+    right:10vw;
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="image1">
+<img width="150" height="110"
+src="images/logo.jpeg" alt="Logo">
+</div>
+
+
+<p id="demo"></p>
+
+     <div class="back-button">
+    <a href="javascript:history.back()">Home</a>
+    </div>
+    <section class="about-section">
+        <div class="container">
+        <h1>Manufacturing</h1>
+        <p><strong>Unmatched Experience and Engineering Excellence<br/></strong>With years of experience and a strong command over crushing and screening, Diamond Crushers delivers rock-solid engineering capabilities. Our commitment to excellence is reflected in every piece of equipment we produce, ensuring top-tier performance and reliability.</p>
+        <p><strong>State-of-the-Art Manufacturing Facilities<br/></strong>Our manufacturing facilities in Pune, Bangalore, and Hyderabad are powerhouses that relentlessly fulfill your requirements. Each facility is equipped with advanced machinery and streamlined processes to guarantee the highest quality, along with our in-house foundry. Our expertise in R&D and manufacturing ensures that our equipment serves you for years, maximizing your profits and supporting your growth.</p>
+        <p><strong>Skilled and Dedicated Force<br/></strong>At Diamond Crushers, our experienced and trained workforce understands that they are crafting investments for you. Our teams at each plant produce equipment with utmost care, ensuring durability and efficiency. We take pride in having our own foundry, producing world-class castings that are integral to our machines’ superior performance.
+        </p>
+        <p><strong>Advance Fabrication and Machining<br/></strong>Our fabrication facility, machining centers, and assembly lines are designed to help you achieve your milestones. We maintain rigorous quality control processes across all our plants to ensure lifetime reliability. Our testing bays play a crucial role, doubling our confidence in the performance and robustness of every product that leaves our facilities.</p>
+        <p><strong>Commitment to Quality and Performance<br/></strong>Diamond Crushers is dedicated to providing equipment that works efficiently on your site, ensuring that every ton you crush yields profit. Our intelligence in the crushing and screening domain guarantees that our products support your growth and success.</p>
+        </div>
+
+
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'demo');
+}
+</script>
+</body>
+</html>
+
+
